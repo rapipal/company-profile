@@ -283,6 +283,19 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 }
 .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
 
+.made-by {
+    display: inline-flex; align-items: center; gap: .625rem;
+    margin-top: 3.5rem;
+    font-size: .875rem; line-height: 1.25rem; color: var(--google-gray);
+    animation: made-by-in .8s ease .3s both;
+}
+.made-by::before {
+    content: ''; width: 2rem; height: .25rem; border-radius: 9999px;
+    background: linear-gradient(90deg, var(--google-blue) 25%, var(--google-red) 25% 50%, var(--google-yellow) 50% 75%, var(--google-green) 75%);
+}
+.made-by strong { font-weight: 600; color: var(--google-dark); }
+@keyframes made-by-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
 .divider-line { display: flex; justify-content: center; }
 .divider-line span { width: 1px; height: 4rem; background: linear-gradient(to bottom, var(--google-border), transparent); }
 
